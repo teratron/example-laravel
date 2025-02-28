@@ -22,6 +22,7 @@
                             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                             <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
                             <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                            <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
                         </div>
                     </div>
                 </div>
@@ -120,7 +121,7 @@
                              alt="">
                     </div>
                     <div class="ml-3">
-                        <div class="text-base/5 font-medium text-white">Lary Robot</div>
+                        <div class="text-base/5 font-medium text-white">Larry Robot</div>
                         <div class="text-sm font-medium text-gray-400">tom@example.com</div>
                     </div>
                     <button type="button"
