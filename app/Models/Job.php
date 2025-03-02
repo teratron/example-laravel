@@ -2,10 +2,19 @@
 
 namespace App\Models;
 
-//use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
+
+class Job extends Model
+{
+    protected $table = 'job_listings';
+
+    protected $fillable = ['title', 'salary'];
+}
+
+/*
 use Illuminate\Support\Arr;
 
-class Job /*extends Model*/
+class Job
 {
     public static function find(int $id): array
     {
@@ -38,4 +47,4 @@ class Job /*extends Model*/
             ],
         ];
     }
-}
+}*/

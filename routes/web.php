@@ -28,14 +28,19 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
+    //$jobs = Job::all();
+    //dd($jobs[0]->title);
+
     return view('home', [
         'greeting' => 'Hello, World!',
         'name' => 'Larry Robot',
     ]);
 });
 
-Route::get('jobs', function () /*use ($jobs)*/ {
-    return view('jobs', ['jobs' => Job::all()/*$jobs*/]);
+Route::get('jobs', function () {
+    return view('jobs', [
+        'jobs' => Job::all()
+    ]);
 });
 
 Route::get('jobs/{id}', function ($id) /*use ($jobs)*/ {
