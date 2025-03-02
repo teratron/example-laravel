@@ -7,7 +7,7 @@ use Illuminate\Support\Arr;
 
 class Job /*extends Model*/
 {
-    public static function find(int $id): array//|null
+    public static function find(int $id): array
     {
         $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
 
