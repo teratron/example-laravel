@@ -15,7 +15,15 @@ class Job extends Model
 
     public function employer()
     {
+        // belongsTo - принадлежит работодателю
         return $this->belongsTo(Employer::class);
+    }
+
+    public function tags()
+    {
+        // belongsToMany - принадлежит многим тегам
+        // foreignPivotKey - внешний ключ в промежуточной таблице
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
     }
 }
 

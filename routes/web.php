@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Job;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 
 /*$jobs = [
@@ -27,7 +28,7 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', function () {
+Route::get('/', function (): View {
     //$jobs = Job::all();
     //dd($jobs[0]->title);
 
@@ -37,13 +38,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('jobs', function () {
+Route::get('jobs', function (): View {
     return view('jobs', [
         'jobs' => Job::all()
     ]);
 });
 
-Route::get('jobs/{id}', function ($id) /*use ($jobs)*/ {
+Route::get('jobs/{id}', function ($id): View /*use ($jobs)*/ {
     /*Arr::first($jobs, function ($job) use ($id) {
         return $job['id'] == $id;
     });*/
@@ -53,14 +54,14 @@ Route::get('jobs/{id}', function ($id) /*use ($jobs)*/ {
     return view('job', ['job' => $job]);
 });
 
-Route::get('about', function () {
+Route::get('about', function (): View {
     return view('about');
 });
 
-Route::get('contact', function () {
+Route::get('contact', function (): View {
     return view('contact');
 });
 
-Route::get('test', function () {
+Route::get('test', function (): array {
     return ['foo' => 'bar'];
 });
